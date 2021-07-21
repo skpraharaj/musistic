@@ -1,17 +1,16 @@
-final String iconAssetsRoot = "assets/icons/";
-final String menuSvg = _getImagePath("menus.svg");
-final String playSvg = _getImagePath("playButton.svg");
-final String pauseSvg = _getImagePath("pauseButton.svg");
-final String nextSvg = _getImagePath("nextSongButton.svg");
-final String previousSvg = _getImagePath("previousSongButton.svg");
-final String likeSvg = _getImagePath("redlike.svg");
-final String aboutSvg = _getImagePath("about.svg");
-final String shareSvg = _getImagePath("share.svg");
-final String lockSvg = _getImagePath("lockscreen.svg");
-final String notificationSvg = _getImagePath("notifications.svg");
-final String othersSvg = _getImagePath("others.svg");
-final String sleepmodeSvg = _getImagePath("sleepmode.svg");
+class AppAssets {
+  const AppAssets._();
 
-String _getImagePath(String fileName) {
-  return iconAssetsRoot + fileName;
+  static const menuSvg = "assets/icons/menus.svg";
+  static const playSvg = "assets/icons/playButton.svg";
+  static const pauseSvg = "assets/icons/pauseButton.svg";
+  static const nextSvg = "assets/icons/nextSongButton.svg";
+  static const previousSvg = "assets/icons/previousSongButton.svg";
+  static const likeSvg = "assets/icons/redlike.svg";
+  static const aboutSvg = "_assets/icons/about.svg";
+  static const shareSvg = "assets/icons/share.svg";
+  static const lockSvg = "assets/icons/lockscreen.svg";
+  static const notificationSvg = "assets/icons/notifications.svg";
+  static const othersSvg = "assets/icons/others.svg";
+  static const sleepmodeSvg = "assets/icons/sleepmode.svg";
 }

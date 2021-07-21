@@ -5,7 +5,11 @@ class Option {
   String title;
   String subtitle;
 
-  Option({required this.icon, required this.title, required this.subtitle});
+  Option({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+  });
 }
 
 final options = [
@@ -35,17 +39,17 @@ final options = [
     subtitle: 'Lorem ipsum dolor sit amet, consect.',
   ),
   Option(
-    icon: Icon(Icons.fastfood, size: 40.0),
+    icon: const Icon(Icons.fastfood, size: 40.0),
     title: 'Option Six',
     subtitle: 'Lorem ipsum dolor sit amet, consect.',
   ),
   Option(
-    icon: Icon(Icons.local_airport, size: 40.0),
+    icon: const Icon(Icons.local_airport, size: 40.0),
     title: 'Option Seven',
     subtitle: 'Lorem ipsum dolor sit amet, consect.',
   ),
   Option(
-    icon: Icon(Icons.settings, size: 40.0),
+    icon: const Icon(Icons.settings, size: 40.0),
     title: 'Option Eight',
     subtitle: 'Lorem ipsum dolor sit amet, consect.',
   ),
