@@ -21,9 +21,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.menu_rounded,
-          color: Colors.white,
+        leading: IconButton(
+          iconSize: 20.0.sp,
+          icon: SvgPicture.asset(AppAssets.menuSvg),
+          onPressed: () {},
         ),
         backgroundColor: Theme.of(context).backgroundColor,
         elevation: 0,

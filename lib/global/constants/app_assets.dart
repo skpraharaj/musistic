@@ -13,4 +13,5 @@ class AppAssets {
   static const notificationSvg = "assets/icons/notifications.svg";
   static const othersSvg = "assets/icons/others.svg";
   static const sleepmodeSvg = "assets/icons/sleepmode.svg";
+  static const themeSvg = "assets/icons/theme.svg";
 }
