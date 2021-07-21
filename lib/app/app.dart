@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musistic/app/app_constants.dart';
+import 'package:musistic/global/constants/app_constants.dart';
 import 'package:musistic/global/routes/route_generator.dart';
 import 'package:musistic/global/theme/app_theme.dart';
 import 'package:sizer/sizer.dart';
