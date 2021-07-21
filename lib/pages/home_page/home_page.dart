@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
+
+//constants
+import 'package:musistic/global/constants/app_assets.dart';
+
+//widgets
 import 'package:flutter_svg/svg.dart';
+import 'package:musistic/global/layout/app_layout.dart';
+import 'package:musistic/global/widgets/primary_button/primary_button.dart';
+import 'package:sizer/sizer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,197 +21,69 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: ElevatedButton(
-          style: ButtonStyle(
-            elevation: MaterialStateProperty.all(0.0),
-            backgroundColor:
-                MaterialStateProperty.all(Theme.of(context).primaryColor),
-          ),
-          onPressed: () {},
-          child: Row(
-            children: [
-              SvgPicture.asset(
-                'assets/icons/menus.svg',
-                fit: BoxFit.cover,
-                height: 12.0,
-                width: 23.37,
-              ),
-            ],
-          ),
+        leading: const Icon(
+          Icons.menu_rounded,
+          color: Colors.white,
         ),
+        backgroundColor: Theme.of(context).backgroundColor,
+        elevation: 0,
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search),
-          ),
-          ElevatedButton(
-            style: ButtonStyle(
-              elevation: MaterialStateProperty.all(0.0),
-              backgroundColor:
-                  MaterialStateProperty.all(Theme.of(context).primaryColor),
+            icon: const Icon(
+              Icons.search_outlined,
+              color: Colors.white,
             ),
             onPressed: () {},
-            child: Row(
-              children: [
-                SvgPicture.asset(
-                  'assets/icons/redlike.svg',
-                  fit: BoxFit.cover,
-                  height: 20,
-                  width: 20,
-                  // color: Colors.red,
-                ),
-              ],
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              AppAssets.likeSvg,
+              height: 2.0.h,
+              width: 2.0.h,
             ),
           ),
         ],
-        elevation: 0.0,
       ),
-      body: Container(
-        color: Theme.of(context).primaryColor,
+      body: Applayout(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text('No Songs'),
-            Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(12.0),
-                ),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.only(
-                  left: 18.5,
-                  right: 17.5,
-                  top: 8,
-                  bottom: 9,
-                ),
-                child: Text(
-                  'Scan Device',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+            SizedBox(
+              height: 5.0.h,
             ),
-            const SizedBox(
-              height: 30.0,
+            Text(
+              "NO SONGS",
+              style: Theme.of(context).textTheme.headline5?.copyWith(
+                    color: Colors.white,
+                  ),
+            ),
+            SizedBox(
+              height: 3.0.h,
+            ),
+            PrimaryButton(
+              onPressed: () {},
+              text: "SCAN DEVICE",
+            ),
+            SizedBox(
+              height: 5.0.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(12.0),
-                    ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                        left: 32.5, right: 31.5, top: 8, bottom: 9),
-                    child: Text(
-                      'Songs',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                PrimaryButton(
+                  onPressed: () {},
+                  text: "SONGS",
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(12.0),
-                    ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                        left: 29.5, right: 27.5, top: 8, bottom: 9),
-                    child: Text(
-                      'Albums',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                PrimaryButton(
+                  onPressed: () {},
+                  text: "ALBUMS",
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(12.0),
-                    ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                        left: 24.5, right: 19.5, top: 8, bottom: 9),
-                    child: Text(
-                      'Playlists',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                PrimaryButton(
+                  onPressed: () {},
+                  text: "PLAYLISTS",
                 ),
               ],
-            ),
-            const SizedBox(
-              height: 30.0,
-            ),
-            Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20.0),
-                    topRight: Radius.circular(20.0),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 30.0),
-                    Text(
-                      '------',
-                      style: TextStyle(color: Theme.of(context).primaryColor),
-                    ),
-                    const SizedBox(height: 30.0),
-                    Text(
-                      '---',
-                      style: TextStyle(color: Theme.of(context).primaryColor),
-                    ),
-                    const SizedBox(height: 30.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/icons/previousSongButton.svg',
-                          fit: BoxFit.cover,
-                          height: 17,
-                          width: 21.5,
-                        ),
-                        Text(
-                          '-5s',
-                          style: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SvgPicture.asset(
-                          'assets/icons/playButton.svg',
-                          fit: BoxFit.cover,
-                          height: 54,
-                          width: 54,
-                        ),
-                        Text(
-                          '+5s',
-                          style: TextStyle(
-                              color: Theme.of(context).primaryColor,
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SvgPicture.asset(
-                          'assets/icons/nextSongButton.svg',
-                          fit: BoxFit.cover,
-                          height: 17.0,
-                          width: 21.5,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
             )
           ],
         ),

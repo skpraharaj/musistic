@@ -26,7 +26,7 @@ class _AppState extends State<App> {
           builder: DevicePreview.appBuilder,
           /*---------------Device Preview---------------*/
           title: AppConstants.appName,
-          initialRoute: '/',
+          initialRoute: '/playerPage',
           onGenerateRoute: RouteGenerator.generateRoute,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
