@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musistic/pages/home_page/home_page.dart';
+import 'package:musistic/pages/player_page/player_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,6 +10,11 @@ class RouteGenerator {
       case '/':
         return MaterialPageRoute(
           builder: (_) => const HomePage(),
+        );
+
+      case '/playerPage':
+        return MaterialPageRoute(
+          builder: (_) => const PlayerPage(),
         );
 
       default:

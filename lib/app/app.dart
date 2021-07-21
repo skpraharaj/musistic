@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:musistic/app/app_constants.dart';
+import 'package:musistic/global/constants/app_constants.dart';
 import 'package:musistic/global/routes/route_generator.dart';
 import 'package:musistic/global/theme/app_theme.dart';
 import 'package:sizer/sizer.dart';
@@ -26,7 +26,7 @@ class _AppState extends State<App> {
           builder: DevicePreview.appBuilder,
           /*---------------Device Preview---------------*/
           title: AppConstants.appName,
-          initialRoute: '/',
+          initialRoute: '/playerPage',
           onGenerateRoute: RouteGenerator.generateRoute,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
