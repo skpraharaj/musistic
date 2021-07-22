@@ -21,6 +21,7 @@ class _PlayerPageState extends State<PlayerPage> {
             top: 2.0.h,
             left: 2.0.w,
             right: 2.0.w,
+            bottom: 2.0.h,
           ),
           decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
@@ -35,12 +36,14 @@ class _PlayerPageState extends State<PlayerPage> {
               Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      SizedBox(width: 5.0.w),
                       Icon(
                         Icons.arrow_drop_down_sharp,
                         color: Theme.of(context).backgroundColor,
                       ),
+                      SizedBox(width: 13.0.w),
                       RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
@@ -82,7 +85,7 @@ class _PlayerPageState extends State<PlayerPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 2.0.h,
+                    height: 7.0.h,
                   ),
                   Text(
                     "nevermind",
@@ -101,7 +104,7 @@ class _PlayerPageState extends State<PlayerPage> {
                           fontSize: 10.0.sp,
                         ),
                   ),
-                  SizedBox(height: 7.0.h),
+                  SizedBox(height: 4.0.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -119,7 +122,7 @@ class _PlayerPageState extends State<PlayerPage> {
                             ),
                       ),
                       IconButton(
-                        iconSize: 40.0.sp,
+                        iconSize: 45.0.sp,
                         onPressed: () {},
                         icon: SvgPicture.asset(
                           AppAssets.playSvg,
@@ -167,6 +170,7 @@ class _PlayerPageState extends State<PlayerPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconButton(
+                    iconSize: 25.0.sp,
                     onPressed: () {},
                     icon: Icon(
                       Icons.comment_outlined,
@@ -174,6 +178,7 @@ class _PlayerPageState extends State<PlayerPage> {
                     ),
                   ),
                   IconButton(
+                    iconSize: 25.0.sp,
                     onPressed: () {},
                     icon: Icon(
                       Icons.music_note_outlined,
@@ -188,6 +193,7 @@ class _PlayerPageState extends State<PlayerPage> {
                     icon: SvgPicture.asset(AppAssets.likeSvg),
                   ),
                   IconButton(
+                    iconSize: 25.0.sp,
                     onPressed: () {},
                     icon: Icon(
                       Icons.shuffle_outlined,
