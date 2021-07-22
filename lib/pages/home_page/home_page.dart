@@ -7,16 +7,20 @@ import 'package:musistic/global/constants/app_assets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:musistic/global/layout/app_layout.dart';
 import 'package:musistic/global/widgets/primary_button/primary_button.dart';
+import 'package:musistic/pages/home_page/components/drawer/app_drawer.dart';
 import 'package:sizer/sizer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  GlobalKey<ScaffoldState> scaffoldStateKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +28,9 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           iconSize: 20.0.sp,
           icon: SvgPicture.asset(AppAssets.menuSvg),
-          onPressed: () {},
+          onPressed: () {
+            scaffoldStateKey.currentState?.openDrawer();
+          },
         ),
         backgroundColor: Theme.of(context).backgroundColor,
         elevation: 0,
@@ -46,6 +52,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      drawer: const AppDrawer(),
       body: Applayout(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

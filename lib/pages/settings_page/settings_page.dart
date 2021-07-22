@@ -5,7 +5,9 @@ import 'package:musistic/pages/settings_page/settings_item/settings_item.dart';
 import 'package:sizer/sizer.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
