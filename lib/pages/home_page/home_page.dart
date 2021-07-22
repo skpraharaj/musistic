@@ -25,13 +25,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          iconSize: 20.0.sp,
-          icon: SvgPicture.asset(AppAssets.menuSvg),
-          onPressed: () {
-            scaffoldStateKey.currentState?.openDrawer();
-          },
-        ),
+        leading: Builder(builder: (context) {
+          return IconButton(
+            iconSize: 20.0.sp,
+            icon: SvgPicture.asset(AppAssets.menuSvg),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
         backgroundColor: Theme.of(context).backgroundColor,
         elevation: 0,
         actions: [

@@ -16,14 +16,15 @@ class BuildDrawerItem extends StatelessWidget {
     return ListTile(
       leading: Icon(
         icon,
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).backgroundColor,
         size: 20.0.sp,
       ),
       title: Text(
         title,
         style: Theme.of(context).textTheme.bodyText2?.copyWith(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).backgroundColor,
               fontSize: 14.0.sp,
+              fontWeight: FontWeight.w500,
             ),
       ),
     );

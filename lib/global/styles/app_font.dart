@@ -7,13 +7,13 @@ class AppFont {
 
   // Font Family
   static TextStyle headlineFont(TextStyle textStyle) {
-    return GoogleFonts.numans(
+    return GoogleFonts.roboto(
       textStyle: textStyle,
     );
   }
 
   static TextStyle bodyFont(TextStyle textStyle) {
-    return GoogleFonts.monda(
+    return GoogleFonts.roboto(
       textStyle: textStyle,
     );
   }
