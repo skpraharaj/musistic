@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 5.0.h,
             ),
+            //No Songs Button
             Text(
               "NO SONGS",
               style: Theme.of(context).textTheme.headline5?.copyWith(
