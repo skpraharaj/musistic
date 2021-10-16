@@ -4,6 +4,7 @@ import 'package:musistic/global/constants/app_assets.dart';
 import 'package:musistic/pages/settings_page/settings_item/settings_item.dart';
 import 'package:sizer/sizer.dart';
 
+// Setting Page
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
     Key? key,
