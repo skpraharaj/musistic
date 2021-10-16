@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:musistic/app/app.dart';
@@ -12,10 +11,7 @@ void main() {
 
   runZonedGuarded(
     () async {
-      WidgetsFlutterBinding.ensureInitialized();
-
-      // AppTheme.setStatusBarAndNavigationBarColor();
-
+      await init();
       runApp(
         DevicePreview(
           enabled: true,
@@ -28,3 +24,5 @@ void main() {
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }
+
+Future<void> init() async => WidgetsFlutterBinding.ensureInitialized();
